@@ -53,7 +53,12 @@
 
     <div  style=" text-align: left; font-weight:500;  background-color: #F7DCFA; margin: 0px; margin-top:10px;" class="row" class="{{ $errors->has('tid') ? 'has-error' : '' }}">
             {{ Form::label('tid', 'Techer ID', array('class'=>'col-md-4 form-group'))}}
-            {{ Form::text('tid',$try->tid, array('class'=>'col-md-8 form-control', 'placeholder'=>'Techer ID'))}}
+            <select name="tid" id="" class="form-control col-md-6">
+                        <option value="">Select teacher</option>
+                        @foreach($teachers as $teacher)
+                            <option value="{{$teacher->tid}}">{{$teacher->name}}</option>
+                        @endforeach
+                    </select>
                 @if($errors->has('tid'))
                 <div class="col-md-6"></div>
          <span class="col-md-6" style="text-align: right; color:red;">

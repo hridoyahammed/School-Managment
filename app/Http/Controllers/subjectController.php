@@ -6,6 +6,8 @@ use App\subjectModel;
 use Illuminate\Http\Request;
 use Validator;
 use file;
+use Illuminate\Support\Facades\DB;
+
 
 
 
@@ -29,7 +31,8 @@ class subjectController extends Controller
      */
     public function create()
     {
-        return view('subject.subject_create');
+        $teachers=DB::table('teacher')->get();
+        return view('subject.subject_create', compact('teachers'));
     }
 
     /**
@@ -79,7 +82,12 @@ class subjectController extends Controller
     public function edit($id)
     {
         $try= subjectModel::findOrFail($id);
-        return view('subject.sub_edit', compact('try'));
+        $teachers=DB::table('teacher')->get();
+        return view('subject.sub_edit', compact('try','teachers'));
+
+         
+
+
     }
 
     /**

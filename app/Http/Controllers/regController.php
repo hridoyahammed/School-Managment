@@ -28,7 +28,8 @@ class regController extends Controller
      */
     public function create()
     {
-         return view('try.try_create');    }
+         return view('try.try_create');    
+     }
 
     /**
      * Store a newly created resource in storage.
