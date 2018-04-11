@@ -1,0 +1,18 @@
+.row button, input, optgroup, select, textarea {
+    margin: 0;
+    font-family: inherit;
+    width: 66% ;
+    font-size: inherit;
+    line-height: inherit;
+}
+.row .form-control {
+  display: block;
+  width: 100%;
+  padding: $input-padding-y $input-padding-x;
+  font-size: $font-size-base;
+  line-height: $input-line-height;
+  color: $input-color;
+  background-color: $input-bg;
+  background-clip: padding-box;
+  border: $input-border-width solid $input-border-color;
+}
