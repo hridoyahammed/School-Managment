@@ -53,7 +53,7 @@
 
     <div  style=" text-align: left; font-weight:500;  background-color:#E7E6E6; margin: 0px; margin-top:10px;" class="row" class="{{ $errors->has('tid') ? 'has-error' : '' }}">
             {{ Form::label('tid', 'Techer ID', array('class'=>'col-md-4 form-group'))}}
-            <select name="tid" id="" class="form-control col-md-6">
+            <select name="tid" id="" class="form-control col-md-8">
                         <option value="">Select teacher</option>
                         @foreach($teachers as $teacher)
                             <option value="{{$teacher->tid}}">{{$teacher->name}}</option>
