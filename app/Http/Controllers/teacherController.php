@@ -105,8 +105,17 @@ class teacherController extends Controller
     {
         $data=teacherModel::findorFail($id);
         $input=$request->all();
+        if ($request->hasFile('image')) {
+                $file=$request->file('image');
+                $fileType=$file->getClientOriginalExtension();
+                $fileName=rand(1,1000).date('dmyhis').".".$fileType;
+                /*$fileName=$file->getClientOriginalName();*/
+                $file->move('public/files/teacher',$fileName);
+                $input['image']=$fileName;
+            }
         $data->update($input);
-         return redirect('/teacher');
+         return redirect('/teacher')->with('success','Update has been Success');
+
     }
 
     /**
@@ -119,6 +128,6 @@ class teacherController extends Controller
     {
         $data=teacherModel::findorFail($id);
          $data->delete($data);
-         return redirect('/teacher');
+         return redirect('/teacher')->with('error','Delete has been Success');
     }
 }

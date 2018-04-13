@@ -27,6 +27,9 @@ Route::group(['middleware'=>'auth'],function(){
 	Route::resource('/try', 'regController');
 	Route::resource('/subject', 'subjectController');
 	Route::resource('/teacher', 'teacherController');
+	Route::resource('/mark', 'markController');
+	Route::resource('/attendenc', 'attendencController');
+	Route::resource('/exam', 'examController');
 	Route::get('/contect', 'ContectController@index');
 });
    

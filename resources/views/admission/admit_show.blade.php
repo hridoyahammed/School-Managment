@@ -6,8 +6,8 @@
 
 @section('content')
 <center><h1><b><i>Admission List</i></b></h1></center><br>
-<table class="table table-responsive">
-	<tr>
+<table class="table table-responsive table-bordered">
+	<tr style="text-align: center;">
 		<th>Sl</th>
 		<th>Image</th>
 		<th>Name</th>
@@ -29,12 +29,12 @@
 		<th>Permanent Address</th>
 		<th>Gender</th>
 		<th>Quotas</th>
-		<th>Edit</th>
-		<th>Delete</th>
+		<th colspan="2">Action</th>
+		
 	</tr>
 	<?php $sl=1; ?>
 	@foreach($data as $student)
-		<tr>
+		<tr style="text-align: center;">
 			<td>{{$sl++}}</td>
 			
 			<td><img height="50px" width="auto" src="public/files/admission/{{$student->image}}"></td>
@@ -61,7 +61,7 @@
 			<td>
 			
 			{!!Form::open(array('route'=> ['admission.update',$student->id], 'method'=>'DELETE'))!!}
-			<button type="submit" class="btn btn-danger" onclick="return deleteConfirm()"><i class="ion ion-ios-trash-outline">Delete</i></button>
+			<button class="btn btn-danger"><i class="fa fa-trash"></i> Delete</button>
 				{!! Form::close() !!}
 			</td>
 		</tr>

@@ -123,13 +123,14 @@ class regController extends Controller
             $fileType=$file->getClientOriginalExtension();
             $fileName=rand(1,1000).date('dmyhis').".".$fileType;
             /*$fileName=$file->getClientOriginalName();*/
-            $file->move('public/files',$fileName);
+            $file->move('public/files/student',$fileName);
             $input['image']=$fileName;
         }
 
 
          $data->update($input);
-         return redirect('/try');
+         return redirect('/try')->with('success','Registration Update has been Success');
+
     }
 
     /**
@@ -142,6 +143,6 @@ class regController extends Controller
     {
         $data=regModel::findorFail($id);
          $data->delete($data);
-         return redirect('/try');
+         return redirect('/try')->with('error','Delete has been Success');
     }
 }

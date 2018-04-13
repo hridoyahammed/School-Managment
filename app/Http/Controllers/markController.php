@@ -2,16 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\subjectModel;
+use App\markModel;
 use Illuminate\Http\Request;
 use Validator;
 use file;
-use Illuminate\Support\Facades\DB;
 
-
-
-
-class subjectController extends Controller
+class markController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -20,8 +16,8 @@ class subjectController extends Controller
      */
     public function index()
     {
-        $data= subjectModel::get();
-        return view('subject.sub_show', compact('data'));
+        $data= markModel::get();
+        return view('mark.mark_show', compact('data'));
     }
 
     /**
@@ -31,8 +27,7 @@ class subjectController extends Controller
      */
     public function create()
     {
-        $teachers=DB::table('teacher')->get();
-        return view('subject.subject_create', compact('teachers'));
+        return view('mark.mark_create'); 
     }
 
     /**
@@ -43,23 +38,24 @@ class subjectController extends Controller
      */
     public function store(Request $request)
     {
-         $input=$request->all();
+        $input=$request->all();
 
-         $validator=Validator::make($request->all(),[
-            'suid'=>'required',
-            'suname'=>'required',
-            'fmark'=>'required',
-            'class'=>'required',
-            'tid'=>'required'
-       ]);
-          
-       if($validator->fails()){
+          $validator=Validator::make($request->all(),[
+                'suid'=>'required',
+                'year'=>'required',
+                'mark'=>'required',
+                'stid'=>'required',
+                'exid'=>'required'
+
+           ]);
+              
+           if($validator->fails()){
             return redirect()->back()->withErrors($validator)->withInput();
-        }
+            }
 
-         $data=subjectModel::create($input);
-         return redirect('/subject')->with('success','Subject Add has been Success');
 
+         $data=markModel::create($input);
+          return redirect('/mark')->with('success','Mark Add has been Success');
     }
 
     /**
@@ -81,13 +77,8 @@ class subjectController extends Controller
      */
     public function edit($id)
     {
-        $try= subjectModel::findOrFail($id);
-        $teachers=DB::table('teacher')->get();
-        return view('subject.sub_edit', compact('try','teachers'));
-
-         
-
-
+        $try= markModel::findOrFail($id);
+        return view('mark.mark_edit', compact('try'));
     }
 
     /**
@@ -99,10 +90,10 @@ class subjectController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $data=subjectModel::findorFail($id);
+        $data=markModel::findorFail($id);
         $input=$request->all();
         $data->update($input);
-         return redirect('/subject');
+          return redirect('/mark')->with('success','Mark Update has been Success');
     }
 
     /**
@@ -113,8 +104,8 @@ class subjectController extends Controller
      */
     public function destroy($id)
     {
-        $data=subjectModel::findorFail($id);
+         $data=markModel::findorFail($id);
          $data->delete($data);
-         return redirect('/subject')->with('error','Delete has been Success');
+         return redirect('/mark')->with('error','Delete has been Success');
     }
 }

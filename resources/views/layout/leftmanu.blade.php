@@ -70,6 +70,54 @@
         </li>
 
 
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents5" data-parent="#exampleAccordion">
+            <i class="fa fa-get-pocket"></i>
+            <span class="nav-link-text">Mark</span>
+          </a>
+          <ul class="sidenav-second-level collapse" id="collapseComponents5">
+            <li>
+              <a href="{{URL::to('/mark/create')}}">Add Mark</a>
+            </li>
+            <li>
+              <a href="{{URL::to('/mark')}}" >Mark List</a>
+            </li>
+          </ul>
+        </li>
+
+         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents6" data-parent="#exampleAccordion">
+            <i class="fa fa-group"></i>
+            <span class="nav-link-text">Attendenc</span>
+          </a>
+          <ul class="sidenav-second-level collapse" id="collapseComponents6">
+            <li>
+              <a href="{{URL::to('/attendenc/create')}}">Add Attendenc</a>
+            </li>
+            <li>
+              <a href="{{URL::to('/attendenc')}}" >Show List</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents7" data-parent="#exampleAccordion">
+            <i class="fa fa-group"></i>
+            <span class="nav-link-text">Exam</span>
+          </a>
+          <ul class="sidenav-second-level collapse" id="collapseComponents7">
+            <li>
+              <a href="{{URL::to('/exam/create')}}">Add Exam</a>
+            </li>
+            <li>
+              <a href="{{URL::to('/exam')}}" >Exam List</a>
+            </li>
+          </ul>
+        </li>
+
+
+
+
           </ul>
         </li>
        

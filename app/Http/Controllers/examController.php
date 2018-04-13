@@ -2,16 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\subjectModel;
+use App\examModel;
 use Illuminate\Http\Request;
 use Validator;
 use file;
-use Illuminate\Support\Facades\DB;
 
 
-
-
-class subjectController extends Controller
+class examController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -20,8 +17,8 @@ class subjectController extends Controller
      */
     public function index()
     {
-        $data= subjectModel::get();
-        return view('subject.sub_show', compact('data'));
+        $data= examModel::get();
+        return view('exam.show_exam', compact('data'));
     }
 
     /**
@@ -31,8 +28,7 @@ class subjectController extends Controller
      */
     public function create()
     {
-        $teachers=DB::table('teacher')->get();
-        return view('subject.subject_create', compact('teachers'));
+        return view('exam.exam_create');
     }
 
     /**
@@ -43,23 +39,18 @@ class subjectController extends Controller
      */
     public function store(Request $request)
     {
-         $input=$request->all();
+        $input=$request->all();
+        $validator=Validator::make($request->all(),[
+            'examid'=>'required',
+            'heldon'=>'required',
+            'year'=>'required'
+        ]);
 
-         $validator=Validator::make($request->all(),[
-            'suid'=>'required',
-            'suname'=>'required',
-            'fmark'=>'required',
-            'class'=>'required',
-            'tid'=>'required'
-       ]);
-          
-       if($validator->fails()){
+        if($validator->fails()){
             return redirect()->back()->withErrors($validator)->withInput();
-        }
-
-         $data=subjectModel::create($input);
-         return redirect('/subject')->with('success','Subject Add has been Success');
-
+            }
+            $data = examModel::create($input);
+             return redirect('/exam')->with('success','Subject Add has been Success');
     }
 
     /**
@@ -81,13 +72,8 @@ class subjectController extends Controller
      */
     public function edit($id)
     {
-        $try= subjectModel::findOrFail($id);
-        $teachers=DB::table('teacher')->get();
-        return view('subject.sub_edit', compact('try','teachers'));
-
-         
-
-
+        $try= examModel::findOrFail($id);
+        return view('exam.edit_exam', compact('try'));
     }
 
     /**
@@ -99,10 +85,10 @@ class subjectController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $data=subjectModel::findorFail($id);
+        $data=examModel::findorFail($id);
         $input=$request->all();
         $data->update($input);
-         return redirect('/subject');
+         return redirect('/exam')->with('success','Update has been Success');
     }
 
     /**
@@ -113,8 +99,8 @@ class subjectController extends Controller
      */
     public function destroy($id)
     {
-        $data=subjectModel::findorFail($id);
+        $data=examModel::findorFail($id);
          $data->delete($data);
-         return redirect('/subject')->with('error','Delete has been Success');
+         return redirect('/exam')->with('error','Delete has been Success');
     }
 }

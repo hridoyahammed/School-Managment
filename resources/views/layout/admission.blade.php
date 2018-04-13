@@ -20,6 +20,8 @@
 
 <body>
  <center>
+  
+
    @yield('content')
       @yield('prodect')
 

@@ -2,16 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\subjectModel;
+use App\attendencModel;
 use Illuminate\Http\Request;
 use Validator;
 use file;
-use Illuminate\Support\Facades\DB;
 
-
-
-
-class subjectController extends Controller
+class attendencController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -20,8 +16,8 @@ class subjectController extends Controller
      */
     public function index()
     {
-        $data= subjectModel::get();
-        return view('subject.sub_show', compact('data'));
+        $data= attendencModel::get();
+        return view('attendenc.show_attendenc', compact('data'));
     }
 
     /**
@@ -31,8 +27,7 @@ class subjectController extends Controller
      */
     public function create()
     {
-        $teachers=DB::table('teacher')->get();
-        return view('subject.subject_create', compact('teachers'));
+         return view('attendenc.add_attendenc');
     }
 
     /**
@@ -43,23 +38,26 @@ class subjectController extends Controller
      */
     public function store(Request $request)
     {
-         $input=$request->all();
+        $input=$request->all();
 
-         $validator=Validator::make($request->all(),[
-            'suid'=>'required',
-            'suname'=>'required',
-            'fmark'=>'required',
-            'class'=>'required',
-            'tid'=>'required'
-       ]);
-          
-       if($validator->fails()){
+          $validator=Validator::make($request->all(),[
+                'sid'=>'required',
+                'date'=>'required',
+                'roll'=>'required',
+                'class'=>'required',
+                'section'=>'required',
+                'intime'=>'required',
+                'outtime'=>'required',
+                'status'=>'required'
+
+           ]);
+
+            if($validator->fails()){
             return redirect()->back()->withErrors($validator)->withInput();
-        }
+            }
 
-         $data=subjectModel::create($input);
-         return redirect('/subject')->with('success','Subject Add has been Success');
-
+          $data=attendencModel::create($input);
+          return redirect('/attendenc')->with('success','Subject Add has been Success');
     }
 
     /**
@@ -81,13 +79,7 @@ class subjectController extends Controller
      */
     public function edit($id)
     {
-        $try= subjectModel::findOrFail($id);
-        $teachers=DB::table('teacher')->get();
-        return view('subject.sub_edit', compact('try','teachers'));
-
-         
-
-
+        //
     }
 
     /**
@@ -99,10 +91,7 @@ class subjectController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $data=subjectModel::findorFail($id);
-        $input=$request->all();
-        $data->update($input);
-         return redirect('/subject');
+        //
     }
 
     /**
@@ -113,8 +102,8 @@ class subjectController extends Controller
      */
     public function destroy($id)
     {
-        $data=subjectModel::findorFail($id);
+        $data=attendencModel::findorFail($id);
          $data->delete($data);
-         return redirect('/subject')->with('error','Delete has been Success');
+         return redirect('/attendenc')->with('error','Delete has been Success');
     }
 }

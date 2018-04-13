@@ -243,6 +243,7 @@
 
         </div>
         </div>
+
       </center>
         <br>
         {!! Form::close() !!}

@@ -1,4 +1,4 @@
-@extends('layout.master')
+ss@extends('layout.master')
 
 @section('title', 'Teacher Page')
 @section('content')
