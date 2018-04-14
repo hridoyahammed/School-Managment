@@ -5,11 +5,11 @@
 
 
 @section('content')
-<center><h1><b><i>Admission List</i></b></h1></center><br>
-<table class="table table-responsive table-bordered">
+<center><h1> Admission List</h1></center><br>
+<table class="table table-responsive table-bordered table-striped">
 	<tr style="text-align: center;">
 		<th>Sl</th>
-		<th>Image</th>
+		<th>Image </th>
 		<th>Name</th>
 		<th>Class</th>
 		<th>Year</th>
@@ -57,7 +57,7 @@
 			<td>{{$student->pead}}</td>
 			<td>{{$student->gender}}</td>
 			<td>{{$student->qut}}</td>
-			<td><a href="" class="btn btn-primary">Edit</a></td> 
+			<td><a href="" class="btn btn-primary"><i class="fa fa-edit"></i>Edit</a></td> 
 			<td>
 			
 			{!!Form::open(array('route'=> ['admission.update',$student->id], 'method'=>'DELETE'))!!}

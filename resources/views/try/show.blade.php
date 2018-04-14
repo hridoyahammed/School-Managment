@@ -1,5 +1,5 @@
 @extends('layout.master')
-@section('title', 'New Student')
+@section('title', 'Student Profile')
 
 @section('content')
 
@@ -18,21 +18,20 @@
     <h1>...{{$try->name}} Profile...</h1>
 </div>
 
-<div id="container">
+<div style="border: 1px solid #CBCBCB; border-radius: 5px; background-color: #FCFCFC; box-shadow: 0 0px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" id="container">
     <div id="profile">
         <div class="col-md-12"><div class="about">
                 <div class="profile-photo">
-                    <img style="height:154px; width:150px;" src="../public/files/student/{{$try->image}}"/>
+                    <img style="height:154px; width:150px; box-shadow: 0 0px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" src="../public/files/student/{{$try->image}}"/>
                 </div><br>
                 <h1>{{$try->name}}</h1>
                 <h3>Student of Shadipur High School.</h3>
                 
             </div>
-            <ul class="basic-info"><br><br>
-                <li><h3>BASIC INFO </h3></li><br>
-                
-                <li><label>Father Name:</label><span style="margin-top:5px;">{{$try->fname}}</span></li>
-                <li><label>Mother Name:</label><span style="margin-top:5px;">{{$try->mname}}</span></li>
+            <ul class="basic-info">
+                <li><h3>BASIC INFO </h3></li>
+                <li style="text-align: center;"><label>Father Name:</label><span style="margin-top:5px;">{{$try->fname}}</span></li>
+                <li style="text-align: center;"><label>Mother Name:</label><span style="margin-top:5px;">{{$try->mname}}</span></li>
             </ul>
         </div>
     </div>
@@ -40,7 +39,7 @@
         <div class="row ">
             <div class="col-md-6 zz ">
                 <h3 class="head2">Academic Information*:</h3>
-                <ul class="basic-info">
+                <ul class="basic-info ">
                     <li><label>Class:</label><span style="margin-top:5px;">{{$try->class}}</span></li>
                     <li><label>Registration:</label><span style="margin-top:5px;">{{$try->reg}}</span></li>
                     <li><label>Roll:</label><span style="margin-top:5px;">{{$try->roll}}</span></li>
@@ -50,10 +49,10 @@
                     <li><label>ID:</label><span style="margin-top:5px;">{{$try->sid}}</span></li>
             </div>
             <div class="col-md-6 yy">
-                <h3 style="margin-top:-25px;" class="head2">Other's Information*:</h3>
-                <ul class="basic-info">
-                    <li><label>Phone:</label><span style="margin-top:5px;">{{$try->phone}}</span></li>
-                    <li><label>Date Of Birth:</label><span style="margin-top:5px;">{{$try->dob}}</span></li>
+                <h3 style="margin-top:-25px;" class="head3">Other's Information*:</h3>
+                <ul class="basic-info" style="margin-right:10px;">
+                    <li><label>Phone:</label><span style="margin-top:5px; ">{{$try->phone}}</span></li>
+                    <li><label>Date Of Birth:</label><span style="margin-top:5px; ">{{$try->dob}}</span></li>
                     <li><label>Gender:</label><span style="margin-top:5px;">{{$try->gender}}</span></li>
                     <li><label>Blood Group:</label><span style="margin-top:5px;">{{$try->blood}}</span></li>
                     <li><label>Address:</label><span style="margin-top:5px;">{{$try->address}}</span></li>
@@ -63,17 +62,9 @@
             </div>
         </div>
     </div>
+    <br><br>
 
-    <div class="row">
-        <div class="h-60"></div>
-        <div class="col-md-3"></div>
-        <div class="col-md-6">
-            <a href=""><br>
-                <button type="submit" name="submit" value="submit" class="btn btn-style blue a"><b>Update</b></button>
-            </a>
-        </div>
-        <div class="col-md-3"></div>
-    </div>
+    
 </div>
 
 </body>

@@ -189,7 +189,7 @@
 
         <div style="text-align: left;font-weight:500; margin: 0px; background-color: #F7DCFA; margin-top:10px; " class="row" class="{{ $errors->has('gender') ? 'has-error' : '' }}">
             {{ Form::label('gender', 'Gender', array('class'=>'col-md-4 form-group'))}}
-            {{ Form::select('gender', ['gender'=>'Select Gender','F'=>'Female', 'M'=>'Male'],$try->gender,array('class'=>'col-md-8 form-control'))}}
+            {{ Form::select('gender', ['gender'=>'Select Gender','Female'=>'Female', 'Male'=>'Male'],$try->gender,array('class'=>'col-md-8 form-control'))}}
         </div>
 
 

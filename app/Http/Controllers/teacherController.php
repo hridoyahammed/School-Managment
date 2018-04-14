@@ -79,7 +79,8 @@ class teacherController extends Controller
      */
     public function show($id)
     {
-        //
+        $try= teacherModel::findorFail($id);
+        return view('teacher.profile', compact('try'));
     }
 
     /**

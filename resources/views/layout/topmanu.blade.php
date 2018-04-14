@@ -1,5 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-    <a class="navbar-brand" href="index.html">School Management</a>
+    <a class="navbar-brand" href="index.html" style="color: white;
+    text-shadow: 1px 1px 2px black, 0 0 15px white, 0 0 5px darkblue;"><b>School Management</b></a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -33,8 +34,10 @@
           </form>
         </li>
         <li class="nav-item">
-          <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
-            <i class="fa fa-fw fa-sign-out"></i>Logout</a>
+          <a class="nav-link" data-toggle="modal" data-target="#exampleModal" style="color: white;
+    text-shadow: 2px 2px 4px #000000;">
+            <i class="fa fa-fw fa-sign-out" style="color: white;
+    text-shadow: 2px 2px 4px #000000;"></i>Logout</a>
         </li>
       </ul>
     </div>

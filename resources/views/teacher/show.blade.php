@@ -3,9 +3,9 @@
 @section('title', 'Sub_Show')
 @section('content')
 
-	<center><h1><b>Teacher List</b></h1></center><br>
-<table class="table table-stripped table-bordered">
-	<tr style="text-align: center;">
+	<center><h1>Teacher List</h1></center><br>
+    <table class="table table-striped table-bordered">
+	<tr>
 		<th>Sl</th>
 		<th>Image</th>
 		<th>Teacher ID</th>
@@ -13,22 +13,22 @@
 		<th>Gender</th>
 		<th>Email</th>
 		<th>Phone</th>
-		<th colspan="2">Action</th>
+		<th style="text-align: center;" colspan="2">Action</th>
 		
 	</tr>
 	<?php $sl=1; ?>
 	@foreach($data as $student)
 
-		<tr style="text-align: center;">
+		<tr>
 			<td>{{$sl++}}</td>
-			<td><img height="50px" width="auto" src="public/files/teacher/{{$student->image}}"></td>
-			<td><a href="{{route('try.show', $student->id)}}">{{$student->name}}</a></td>
+			<td style="text-align: center;"><img height="50px" width="auto" src="public/files/teacher/{{$student->image}}"></td>
+			<td><a href="{{route('teacher.show', $student->id)}}">{{$student->name}}</a></td>
 			<td>{{$student->tid}}</td>
 			<td>{{$student->gender}}</td>
 			<td>{{$student->email}}</td>
 			<td>{{$student->phone}}</td>
-			<td><a href="{{route('teacher.edit', $student->id)}}" class="btn btn-primary">Edit</a></td> 
-			<td>
+			<td  style="text-align: center;"><a href="{{route('teacher.edit', $student->id)}}" class="btn btn-primary"><i class="fa fa-edit"></i> Edit</a></td> 
+			<td  style="text-align: center;">
 				{!!Form::open(array('route'=> ['teacher.update',$student->id], 'method'=>'DELETE'))!!} 
 			
 

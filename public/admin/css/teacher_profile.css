@@ -1,0 +1,58 @@
+.wrapper{
+    height: auto;
+    margin-bottom: 150px;
+    /*border:2px double #5e5d5d;*/
+    border-bottom: 6px solid green;
+    background-color: lightgrey;
+    box-shadow: 0 0px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.heading{
+    text-align: center;
+    background-color: #EBEEEB;
+    font-family: "Apple Color Emoji";
+    padding-top: 10px;
+    margin-top: 50px;
+    
+}
+.content{
+    text-align: left;
+}
+.line{
+    border-bottom: 2px dashed #000;
+}
+.img{
+    height:140px;
+    width:130px;
+    margin-bottom: 30px;
+    border: 1px solid #4CAF50;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.h3{
+    font-weight: lighter;
+    font-size: 32px;
+    font-family: monospace;
+}
+.accademy_section{
+    text-align: left;
+}
+label{
+    font-size: 17px;
+    font-weight: lighter;
+}
+.span{
+    text-align: left;
+    font-weight: bold;
+}
+.img {
+    margin-top: 43px;
+    vertical-align: middle;
+}
+#height-20{
+    height: 20px;
+}
+.height-30{
+    height: 30px;
+}
+#height-10{
+    height: 10px;
+}

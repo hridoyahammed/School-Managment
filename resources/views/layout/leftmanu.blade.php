@@ -2,15 +2,15 @@
         
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
           <a class="nav-link" href="{{URL::to('/contect')}}">
-            <i class="fa fa-home" style="font-size:24px"></i>
-            <span class="nav-link-text"><b>Dashboard</b></span>
+            <i class="fa fa-home" style="font-size:24px; color: white; text-shadow: 2px 2px 4px #000000;"></i>
+            <span class="nav-link-text" style="color:white; text-shadow: 2px 2px 4px #000000;"><b>Dashboard</b></span>
           </a>
         </li>
         
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
-            <i class="fa fa-user-plus"></i>
-            <span class="nav-link-text">Students</span>
+            <i class="fa fa-user-plus" style="color: white; text-shadow: 2px 2px 4px #000000;"></i> 
+            <span class="nav-link-text" style="color: white; text-shadow: 2px 2px 4px #000000;"> Students</span>
           </a>
           <ul class="sidenav-second-level collapse" id="collapseComponents">
             <li>
@@ -26,8 +26,8 @@
           
              <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents2" data-parent="#exampleAccordion">
-            <i class="fa fa-pencil"></i> 
-            <span class="nav-link-text">Subject</span>
+            <i class="fa fa-book"  style="color: white; text-shadow: 2px 2px 4px #000000;"></i> 
+            <span class="nav-link-text" style="color: white; text-shadow: 2px 2px 4px #000000;"> Subject</span>
           </a>
           <ul class="sidenav-second-level collapse" id="collapseComponents2">
             <li>
@@ -41,8 +41,8 @@
 
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents3" data-parent="#exampleAccordion">
-            <i class="fa fa-mortar-board"></i>
-            <span class="nav-link-text">Admission</span>
+            <i class="fa fa-mortar-board" style="color: white; text-shadow: 2px 2px 4px #000000;"></i>
+            <span class="nav-link-text" style="color: white; text-shadow: 2px 2px 4px #000000;">Admission</span>
           </a>
           <ul class="sidenav-second-level collapse" id="collapseComponents3">
             <li>
@@ -56,12 +56,12 @@
 
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents4" data-parent="#exampleAccordion">
-            <i class="fa fa-user"></i>
-            <span class="nav-link-text">Teacher</span>
+            <i class="fa fa-user" style="color: white; text-shadow: 2px 2px 4px #000000;"></i>
+            <span class="nav-link-text" style="color: white; text-shadow: 2px 2px 4px #000000;">Teacher</span>
           </a>
           <ul class="sidenav-second-level collapse" id="collapseComponents4">
             <li>
-              <a href="{{URL::to('/teacher/create')}}">Form</a>
+              <a href="{{URL::to('/teacher/create')}}">Add Teacher</a>
             </li>
             <li>
               <a href="{{URL::to('/teacher')}}" >Teacher List</a>
@@ -72,8 +72,8 @@
 
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents5" data-parent="#exampleAccordion">
-            <i class="fa fa-get-pocket"></i>
-            <span class="nav-link-text">Mark</span>
+            <i class="fa fa-get-pocket" style="color: white; text-shadow: 2px 2px 4px #000000;"></i>
+            <span class="nav-link-text" style="color: white; text-shadow: 2px 2px 4px #000000;">Mark</span>
           </a>
           <ul class="sidenav-second-level collapse" id="collapseComponents5">
             <li>
@@ -87,8 +87,8 @@
 
          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents6" data-parent="#exampleAccordion">
-            <i class="fa fa-group"></i>
-            <span class="nav-link-text">Attendenc</span>
+            <i class="fa fa-group" style="color: white; text-shadow: 2px 2px 4px #000000;"></i>
+            <span class="nav-link-text" style="color: white; text-shadow: 2px 2px 4px #000000;">Attendenc</span>
           </a>
           <ul class="sidenav-second-level collapse" id="collapseComponents6">
             <li>
@@ -102,8 +102,8 @@
 
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents7" data-parent="#exampleAccordion">
-            <i class="fa fa-group"></i>
-            <span class="nav-link-text">Exam</span>
+            <i class="fa fa-cube" style="color: white; text-shadow: 2px 2px 4px #000000;"></i>
+            <span class="nav-link-text" style="color: white; text-shadow: 2px 2px 4px #000000;">Exam</span>
           </a>
           <ul class="sidenav-second-level collapse" id="collapseComponents7">
             <li>
