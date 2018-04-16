@@ -18,7 +18,7 @@
           @endif
     </div>
 
-    <div style="text-align: left; font-weight:500;  background-color: #F7DCFA; margin: 0px; margin-top:10px; " class="row" class="{{ $errors->has('heldon') ? 'has-error' : '' }}">
+    <div style="text-align: left; font-weight:500;  background-color: #A6FEA4; margin: 0px; margin-top:10px; " class="row" class="{{ $errors->has('heldon') ? 'has-error' : '' }}">
             {{ Form::label('heldon', 'Held On', array('class'=>'col-md-4 form-group'))}}
             {{ Form::text('heldon', $try->heldon, array('class'=>'col-md-8 form-control', 'placeholder'=>'Held On'))}}
                 @if($errors->has('heldon'))

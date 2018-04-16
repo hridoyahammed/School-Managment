@@ -18,7 +18,7 @@
           @endif
     </div>
 
-    <div style="text-align: left; font-weight:500;  background-color: #F7DCFA; margin: 0px; margin-top:10px; " class="row" class="{{ $errors->has('year') ? 'has-error' : '' }}">
+    <div style="text-align: left; font-weight:500;  background-color: #A6FEA4; margin: 0px; margin-top:10px; " class="row" class="{{ $errors->has('year') ? 'has-error' : '' }}">
             {{ Form::label('year', 'Year', array('class'=>'col-md-4 form-group'))}}
             {{ Form::text('year', '', array('class'=>'col-md-8 form-control', 'placeholder'=>'Year'))}}
                 @if($errors->has('year'))
@@ -40,7 +40,7 @@
           @endif
     </div>
 
-    <div  style="text-align: left; font-weight:500;  background-color: #F7DCFA;  margin: 0px; margin-top:10px; " class="row" class="{{ $errors->has('stid') ? 'has-error' : '' }}">
+    <div  style="text-align: left; font-weight:500;  background-color: #A6FEA4;  margin: 0px; margin-top:10px; " class="row" class="{{ $errors->has('stid') ? 'has-error' : '' }}">
             {{ Form::label('stid', 'Student ID', array('class'=>'col-md-4 form-group'))}}
             {{ Form::number('stid','', array('class'=>'col-md-8 form-control', 'placeholder'=>'Student ID'))}}
                  @if($errors->has('stid'))

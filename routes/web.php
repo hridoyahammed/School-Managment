@@ -30,6 +30,7 @@ Route::group(['middleware'=>'auth'],function(){
 	Route::resource('/mark', 'markController');
 	Route::resource('/attendenc', 'attendencController');
 	Route::resource('/exam', 'examController');
+	Route::resource('/class', 'ClassController');
 	Route::get('/contect', 'ContectController@index');
 });
    

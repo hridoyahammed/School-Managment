@@ -18,7 +18,7 @@
           @endif
     </div>
 
-    <div style="text-align: left; font-weight:500; background-color:#E7E6E6; margin: 0px; margin-top:10px; " class="row" class="{{ $errors->has('suname') ? 'has-error' : '' }}">
+    <div style="text-align: left; font-weight:500; background-color:#A6FEA4; margin: 0px; margin-top:10px; " class="row" class="{{ $errors->has('suname') ? 'has-error' : '' }}">
             {{ Form::label('suname', 'Subject Name', array('class'=>'col-md-4 form-group'))}}
             {{ Form::text('suname',$try->suname, array('class'=>'col-md-8 form-control', 'placeholder'=>'Subject Name'))}}
                 @if($errors->has('suname'))
@@ -40,7 +40,7 @@
           @endif
     </div>
 
-    <div  style="text-align: left; font-weight:500; background-color:#E7E6E6;  margin: 0px; margin-top:10px; " class="row" class="{{ $errors->has('class') ? 'has-error' : '' }}">
+    <div  style="text-align: left; font-weight:500; background-color:#A6FEA4;  margin: 0px; margin-top:10px; " class="row" class="{{ $errors->has('class') ? 'has-error' : '' }}">
             {{ Form::label('class', 'Class', array('class'=>'col-md-4 form-group'))}}
             {{ Form::select('class', ['class'=>'Select Class','One'=>'1', 'Two'=>'2', 'Three'=>'3', 'Four'=>'4', 'Five'=>'5'],$try->class,array('class'=>'col-md-8 form-control', 'placeholder'=>'Class'))}}
                  @if($errors->has('class'))

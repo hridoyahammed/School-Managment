@@ -18,7 +18,7 @@
           @endif
     </div>
 
-    <div style="text-align: left; font-weight:500;  background-color: #F7DCFA; margin: 0px; margin-top:10px; " class="row" class="{{ $errors->has('date') ? 'has-error' : '' }}">
+    <div style="text-align: left; font-weight:500;  background-color: #A6FEA4; margin: 0px; margin-top:10px; " class="row" class="{{ $errors->has('date') ? 'has-error' : '' }}">
             {{ Form::label('date', 'Date', array('class'=>'col-md-4 form-group'))}}
             {{ Form::date('date', '', array('class'=>'col-md-8 form-control', 'placeholder'=>'Date'))}}
                 @if($errors->has('date'))
@@ -40,7 +40,7 @@
           @endif
     </div>
 
-    <div  style="text-align: left; font-weight:500;  background-color: #F7DCFA;  margin: 0px; margin-top:10px; " class="row" class="{{ $errors->has('class') ? 'has-error' : '' }}">
+    <div  style="text-align: left; font-weight:500;  background-color: #A6FEA4;  margin: 0px; margin-top:10px; " class="row" class="{{ $errors->has('class') ? 'has-error' : '' }}">
            {{ Form::label('class', 'Class', array('class'=>'col-md-4 form-group'))}}
             {{ Form::select('class', ['class'=>'Select Class','One'=>'1', 'Two'=>'2', 'Three'=>'3', 'Four'=>'4', 'Five'=>'5'], array('class'=>'col-md-8 form-control', 'placeholder'=>'Class'))}}
                  @if($errors->has('class'))
@@ -62,7 +62,7 @@
           @endif
     </div>
 
-    <div  style="text-align: left; font-weight:500;  background-color: #F7DCFA;  margin: 0px; margin-top:10px; " class="row" class="{{ $errors->has('intime') ? 'has-error' : '' }}">
+    <div  style="text-align: left; font-weight:500;  background-color: #A6FEA4;  margin: 0px; margin-top:10px; " class="row" class="{{ $errors->has('intime') ? 'has-error' : '' }}">
             {{ Form::label('intime', 'In Time', array('class'=>'col-md-4 form-group'))}}
             {{ Form::text('intime','', array('class'=>'col-md-8 form-control', 'placeholder'=>' In Time'))}}
                  @if($errors->has('intime'))
@@ -85,7 +85,7 @@
           @endif
     </div>
 
-    <div  style="text-align: left; font-weight:500;  background-color: #F7DCFA;  margin: 0px; margin-top:10px; " class="row" class="{{ $errors->has('status') ? 'has-error' : '' }}">
+    <div  style="text-align: left; font-weight:500;  background-color: #A6FEA4;  margin: 0px; margin-top:10px; " class="row" class="{{ $errors->has('status') ? 'has-error' : '' }}">
             {{ Form::label('status', 'Status', array('class'=>'col-md-4 form-group'))}}
             {{ Form::text('status','', array('class'=>'col-md-8 form-control', 'placeholder'=>' Status'))}}
                  @if($errors->has('status'))

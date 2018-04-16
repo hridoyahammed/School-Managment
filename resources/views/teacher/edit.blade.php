@@ -18,7 +18,7 @@
           @endif
     </div>
 
-    <div  style="text-align: left; font-weight:500; background-color: #F7DCFA; margin: 0px; margin-top:10px; " class="row" class="{{ $errors->has('name') ? 'has-error' : '' }}">
+    <div  style="text-align: left; font-weight:500; background-color: #A6FEA4; margin: 0px; margin-top:10px; " class="row" class="{{ $errors->has('name') ? 'has-error' : '' }}">
             {{ Form::label('name', 'Name', array('class'=>'col-md-4 form-group'))}}
             {{ Form::text('name',$try->name,array('class'=>'col-md-8 form-control', 'placeholder'=>'Name'))}}
                  @if($errors->has('name'))
@@ -40,7 +40,7 @@
           @endif
     </div>
 
-    <div style="text-align: left; font-weight:500;  background-color: #F7DCFA;  margin: 0px; margin-top:10px; " class="row" class="{{ $errors->has('dob') ? 'has-error' : '' }}">
+    <div style="text-align: left; font-weight:500;  background-color: #A6FEA4;  margin: 0px; margin-top:10px; " class="row" class="{{ $errors->has('dob') ? 'has-error' : '' }}">
             {{ Form::label('dob', 'Date Of Birth', array('class'=>'col-md-4 form-group'))}}
             {{ Form::date('dob',$try->dob, array('class'=>'col-md-8 form-control', 'placeholder'=>' Date Of Birth'))}}
                 @if($errors->has('dob'))
@@ -62,7 +62,7 @@
           @endif
     </div>
 
-       <div style="text-align: left; font-weight:500;  background-color: #F7DCFA; margin: 0px; margin-top:10px; " class="row" class="{{ $errors->has('gender') ? 'has-error' : '' }}">
+       <div style="text-align: left; font-weight:500;  background-color: #A6FEA4; margin: 0px; margin-top:10px; " class="row" class="{{ $errors->has('gender') ? 'has-error' : '' }}">
             {{ Form::label('gender', 'Gender', array('class'=>'col-md-4 form-group'))}}
             {{ Form::select('gender', ['gender'=>'Select Gender','F'=>'Female', 'M'=>'Male'] ,$try->gender,array('class'=>'col-md-8 form-control'))}}
             @if($errors->has('gender'))
@@ -87,7 +87,7 @@
           @endif
     </div>
 
-    <div style=" text-align: left; font-weight:500;  background-color: #F7DCFA; margin: 0px; margin-top:10px;" class="row" class="{{ $errors->has('rel') ? 'has-error' : '' }}">
+    <div style=" text-align: left; font-weight:500;  background-color: #A6FEA4; margin: 0px; margin-top:10px;" class="row" class="{{ $errors->has('rel') ? 'has-error' : '' }}">
             {{ Form::label('rel', 'Religion', array('class'=>'col-md-4 form-group'))}}
             {{ Form::text('rel', $try->rel, array('class'=>'col-md-8 form-control', 'placeholder'=>'Religion'))}}
                 @if($errors->has('rel'))
@@ -109,7 +109,7 @@
           @endif
     </div>
 
-    <div style=" text-align: left; font-weight:500;  background-color: #F7DCFA;  margin: 0px; margin-top:10px;" class="row" class="{{ $errors->has('address') ? 'has-error' : '' }}">
+    <div style=" text-align: left; font-weight:500;  background-color: #A6FEA4;  margin: 0px; margin-top:10px;" class="row" class="{{ $errors->has('address') ? 'has-error' : '' }}">
             {{ Form::label('address', "Address", array('class'=>'col-md-4 form-group'))}}
             {{ Form::textarea('address',$try->address,['size' => '20x3'],array('class'=>'col-md-8 form-control', 'placeholder'=>"Address"))}}
                 @if($errors->has('address'))

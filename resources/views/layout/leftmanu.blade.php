@@ -115,6 +115,13 @@
           </ul>
         </li>
 
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+          <a class="nav-link" href="{{URL::to('/class/create')}}">
+            <i class="fa fa-home" style="font-size:24px; color: white; text-shadow: 2px 2px 4px #000000;"></i>
+            <span class="nav-link-text" style="color:white; text-shadow: 2px 2px 4px #000000;">CLass</span>
+          </a>
+        </li>
+
 
 
 
