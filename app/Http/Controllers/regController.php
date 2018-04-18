@@ -17,7 +17,7 @@ class regController extends Controller
      */
     public function index()
     {
-      $data=regModel::paginate(1);;
+      $data=regModel::paginate(5);;
       return view('try.student', compact('data')); 
     }
 
